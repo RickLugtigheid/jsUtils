@@ -1,0 +1,24 @@
+{
+  "name": "js-utils",
+  "version": "1.0.0",
+  "description": "A module to add extra functions and data types",
+  "main": "./lib/utils.js",
+
+  "author": "Rick Lugtgheid",
+  "homepage": "https://github.com/RickLugtigheid/jsUtils",
+  "repository": "git://github.com/RickLugtigheid/jsUtils.git",
+  "keywords": [
+    "utils",
+    "binarytree",
+    "sorting"
+  ],
+
+  "binary": {
+    "module_name": "jsUtils",
+    "module_path": "build/Release",
+    "remote_path": "v{version}",
+    "package_name": "{module_name}-v{version}-{node_abi}-{platform}-{libc}-{arch}.tar.gz"
+  },
+  
+  "license": "ISC"
+}
