@@ -5,7 +5,7 @@ jsUtils is a module for [Node.js](http://nodejs.org).
 ## Installation
 
 ```bash
-$ npm install js-utils
+$ npm i @rick_lugtigheid/js_utils
 ```
 
 ### Documentation
