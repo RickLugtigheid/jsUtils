@@ -1,7 +1,7 @@
 {
   "name": "@rick_lugtigheid/js_utils",
-  "version": "1.0.0",
-  "description": "A module to add extra functions and data types",
+  "version": "1.0.1",
+  "description": "A module that adds extra functions and data types",
   "main": "./lib/utils.js",
 
   "author": "Rick Lugtgheid",
@@ -11,6 +11,7 @@
     "url": "https://github.com/RickLugtigheid/jsUtils.git"
   },
   "keywords": [
+    "js-utils",
     "utils",
     "binarytree",
     "sorting",
