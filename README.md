@@ -15,7 +15,7 @@ $ npm i @rick_lugtigheid/js_utils
 * [easyJson()](#easyJson)
 * [binaryTree()](#binaryTree)
 * [Vector2()](#Vector2)
-
+----
 
 ### getSubString()
 
@@ -63,7 +63,7 @@ console.log(array);//Output: [8, 10, 30, 32, 700,900]
 
 easy for manipulating json files
 
-new easyJson()
+###### new easyJson()
 ```js
 const jsUtils = require('@rick_lugtigheid/js_utils')
 
@@ -78,7 +78,7 @@ for context here is the jsonfile I will be using for the documentation
 }
 ```
 
-easyJson().json
+###### easyJson().json
 ```js
 //the .json var is the json object of the file
 console.log(DB.json)//Output: { "name": "name here", "Hobbies": ["footbal", "programming"], "misc": {"age": 32}}
@@ -97,7 +97,7 @@ DB.json.newKey = "this is a new key";
 console.log(DB.json)//Output: { "name": "name here", "Hobbies": ["footbal", "programming"], "misc": {"age": 32}, "newKey": "this is a new key"}
 ```
 
-easyJson().makeBackup()
+###### easyJson().makeBackup()
 ```js
 //updates the backup, so sets backup to the .json var
 DB.json.name = "backupName";
@@ -106,20 +106,20 @@ DB.makeBackup()
 console.log(DB.backup.name)//Output: backupName
 ```
 
-easyJson().save()
+###### easyJson().save()
 ```js
 //saves the .json back into the file
 //also updates the .backup 
 DB.save()
 ```
 
-easyJson().saveBackup()
+###### easyJson().saveBackup()
 ```js
 //saves the backup data into a file named backup.json
 //this can be handy if you exedently did something to the main jsonfile
 DB.saveBackup()
 ```
-easyJson().clear(newPath)
+###### easyJson().clear(newPath)
 ```js
 //clears the object
 DB.clear()//without the parameter it will just clear the object
@@ -132,13 +132,13 @@ DB.clear("other.json")//with parameter it will clear and reset the object with a
 A [binary tree](https://en.wikipedia.org/wiki/Binary_tree) is a tree of nodes
 with all nodes having a right and left child
 
-new binaryTree()
+###### new binaryTree()
 ```js
 const jsUtils = require('@rick_lugtigheid/js_utils')
 let tree = new jsUtils.binaryTree();
 ```
 
-binaryTree().add(node)
+###### binaryTree().add(node)
 ```js
 //adding a node. The first node you add is the root node
 tree.add(new jsUtils.node(0))
@@ -152,13 +152,13 @@ tree.add(new jsUtils.node(-1))
 tree.add(new jsUtils.node(1))
 ```
 
-binaryTree().traverse()
+###### binaryTree().traverse()
 ```js
 //this function will visit every node in the tree
 tree.traverse();
 ```
 
-binaryTree().toArray()
+###### binaryTree().toArray()
 ```js
 //this function will visit every node in the tree
 //and put its value in an array
@@ -169,7 +169,7 @@ tree.add(new jsUtils.node(1))
 console.log(tree.toArray()); //Output: [ -1, 1, 0]
 ```
 
-binaryTree().fromArray()
+###### binaryTree().fromArray()
 ```js
 //this function will add the content of an array to the tree
 var toArr = [ -1, 1, 0];//we can reverse the .toArray function
@@ -177,7 +177,7 @@ tree.fromArray(toArr);
 tree.traverse(); //Output: -1 1 0
 ```
 
-binaryTree().search(searchValue)
+###### binaryTree().search(searchValue)
 ```js
 //this function will search the tree for a node
 //with the value that is given as the parameter
@@ -190,26 +190,26 @@ tree.search(0);
 
 A Vector2 is a representation of 2D vectors and points.
 
-new Vector2()
+###### new Vector2()
 ```js
 const jsUtils = require('@rick_lugtigheid/js_utils')
 var x = 5, y = 10
 let vector = new jsUtils.Vector2(x, y);
 ```
 
-Vector2().toString()
+###### Vector2().toString()
 ```js
 console.log(vector.toString()); //Output: vector2(5, 10)
 ```
 
-Vector2().set(x, y)
+###### Vector2().set(x, y)
 ```js
 //lets you set the x and y values of an Vector2
 vector.set(10, 20);
 console.log(vector.toString()); //Output: vector2(10, 20)
 ```
 
-Vector2().clone()
+###### Vector2().clone()
 ```js
 //makes a clone of a Vector2
 var clone = vector.clone();
@@ -218,7 +218,7 @@ console.log(clone.toString()); //Output: vector2(10, 20)
 
 [Vector2 Math]
 
-Vector2().add(vector2)
+###### Vector2().add(vector2)
 ```js
 //this is basicly: vector.y + otherVector.y
 //and vector.x + otherVector.x
@@ -226,7 +226,7 @@ var add = new jsUtils.Vector2(5, 5).add(new jsUtils.Vector2(5, 5));
 console.log(add.toString()); //Output: vector2(10, 10)
 ```
 
-Vector2().subtract(vector2)
+###### Vector2().subtract(vector2)
 ```js
 //this is basicly: vector.y - otherVector.y
 //and vector.x - otherVector.x
@@ -234,7 +234,7 @@ var sub = new jsUtils.Vector2(5, 10).subtract(new jsUtils.Vector2(5, 5));
 console.log(sub.toString()); //Output: vector2(0, 5)
 ```
 
-Vector2().Scale(vector2)
+###### Vector2().Scale(vector2)
 ```js
 //this is basicly: vector.y * otherVector.y
 //and vector.x * otherVector.x
@@ -242,7 +242,7 @@ var scale = new jsUtils.Vector2(2, 5).Scale(new jsUtils.Vector2(6, 2));
 console.log(scale.toString()); //Output: vector2(12, 10)
 ```
 
-Vector2().Division(vector2)
+###### Vector2().Division(vector2)
 ```js
 //this is basicly: vector.y / otherVector.y
 //and vector.x / otherVector.x
@@ -250,7 +250,7 @@ var div = new jsUtils.Vector2(8, 12).Division(new jsUtils.Vector2(2, 2));
 console.log(div.toString()); //Output: vector2(4, 6)
 ```
 
-Vector2().angle()
+###### Vector2().angle()
 ```js
 //calculate the angle between the y and x values of the vector in degrees
 var angle = new Vector2(1, 5).angle();
@@ -259,10 +259,9 @@ console.log(angle); //Output: 1,37.....ect note: the angle is in degrees
 ----
 
 ### Version Log
-   [v1.0.1]
-   added:
-      [easyJson()](#easyJson)
-      [binaryTree()](#binaryTree).toArray()
-      [binaryTree()](#binaryTree).fromArray()
 
+| Version  | added |
+| ------------- | ------------- |
+| [v1.0.1]      | [easyJson()](#easyJson) |
+| [v1.0.1]      | [binaryTree()](#binaryTree).toArray() and  [binaryTree()](#binaryTree).fromArray() |
 ----
