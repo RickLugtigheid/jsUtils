@@ -352,7 +352,7 @@ console.log(angle); //Output: 1,37.....ect note: the angle is in degrees
 Note: v1.0.2 is not out yet
 | Version  | added |
 | ------------- | ------------- |
-| [v1.0.2]      | [Vector2()](#Vector2)[.Equals](#vector2equalsvector2-vector2) & [.Magnitude](#vector2magnitude) & [.Normalize](#vector2normalize) & [.Dot](#vector2dotvector2-vector2) & [.Clamp] (#vector2clampmin-vector2-max-vector2) |
+| [v1.0.2]      | [Vector2()](#Vector2)[.Equals](#vector2equalsvector2-vector2) & [.Magnitude](#vector2magnitude) & [.Normalize](#vector2normalize) & [.Dot](#vector2dotvector2-vector2) & [.Clamp](#vector2clampmin-vector2-max-vector2) |
 | [v1.0.2]      | default values to parameters |
 | [v1.0.1]      | [easyJson()](#easyJson) |
 | [v1.0.1]      | [binaryTree().toArray()](#binarytreetoarray) and  [binaryTree().fromArray()](#binarytreefromarray) |
