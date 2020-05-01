@@ -12,3 +12,12 @@ if(vector.Equals(new jsUtils.Vector2(2, 1))){
 }else{
     console.log(false)
 }
+
+console.log("[ERROR CHECKING]")
+console.log("your vector is: "+jsUtils.One+"test")
+vector.Set(2, 2)
+vector.Subtract(new jsUtils.Vector2(2, 2))
+console.log(vector);
+
+var tree = jsUtils.treeFromArray([0, 10, -1, 80, 7, -90, 2, 3])
+console.log(tree)

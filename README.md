@@ -13,8 +13,44 @@ $ npm i @rick_lugtigheid/js_utils
 * [timeLoop()](#timeLoop)
 * [quicksort()](#quicksort)
 * [easyJson()](#easyJson)
+   * ###### Properties
+      * [.json](#easyjsonjson): `json object`
+   * ###### Methods
+      * [.makeBackup()](#easyjsonmakebackup)
+      * [.save()](#easyjsonsave)
+      * [.saveBackup()](#easyjsonsavebackup)
+      * [.clear()](#easyjsonclearnewpath)
+
 * [binaryTree()](#binaryTree)
+   * ###### Properties
+      * .root: `jsUtils.node()`
+   * ###### Methods
+      * [add()](#binarytreeaddnode)
+      * [traverse()](#binarytreetraverse)
+      * [toArray()](#binarytreetoarray)
+      * [fromArray()](#binarytreefromarray)
+      * [search()](#binarytreesearchsearchvalue)
+
 * [Vector2()](#Vector2)
+   * ###### Properties
+      * .x: `int`
+      * .y: `int`
+   * ###### Misc Methods
+      * [.Set()](#vector2setx-y)
+      * [.toString()](#vector2tostring)
+      * [.Equals()](#vector2equalsvector2-vector2)
+      * [.Clone()](#vector2clone)
+   * ###### Math Methods
+      * [.Add()](#vector2addvector2-vector2)
+      * [.Subtract()](#subtractvector2-vector2)
+      * [.Scale()](#vector2scalevector2-vector2)
+      * [.Divide()](#vector2dividevector2-vector2)
+      * [.Magnitude()](#vector2magnitude)
+      * [.Normalize()](#vector2normalize)
+      * [.Dot()](#vector2dotvector2-vector2)
+      * [.Clamp()](#vector2clampmin-vector2-max-vector2)
+      * [.Angle()](#vector2angle)
+
 ----
 
 ### getSubString()
@@ -175,6 +211,9 @@ console.log(tree.toArray()); //Output: [ -1, 1, 0]
 var toArr = [ -1, 1, 0];//we can reverse the .toArray function
 tree.fromArray(toArr);
 tree.traverse(); //Output: -1 1 0
+
+//short notation/init notation
+var newTree = jsUtils.treeFromArray(toArr);
 ```
 
 ###### binaryTree().search(searchValue)
@@ -214,9 +253,10 @@ console.log(vector); //Output: vector2(10, 20)
 
 ###### Vector2().toString()
 ```js
-//lets you set the x and y values of an Vector2
 vector.set(1, 0);
 console.log("usefull for in strings => "+vector.toString()); //Output: usefull for in strings => {1, 0}
+//node js automatically calls this function in console.log
+console.log("node Js automatically calls toString() => "+vector; //Output: node Js automatically calls toString() => {1, 0}
 ```
 
 ###### Vector2().Equals(Vector2?: Vector2)
@@ -308,7 +348,7 @@ console.log(angle); //Output: 1,37.....ect note: the angle is in degrees
 Note: v1.0.2 is not out yet
 | Version  | added |
 | ------------- | ------------- |
-| [v1.0.2]      | [Vector2()](#Vector2).Equals & .Magnitude & .Normalize & .Dot & .Clamp|
+| [v1.0.2]      | [Vector2()](#Vector2)[.Equals](#vector2equalsvector2-vector2) & [.Magnitude](#vector2magnitude) & [.Normalize](#vector2normalize) & [.Dot](#vector2dotvector2-vector2) & [.Clamp] (#vector2clampmin-vector2-max-vector2) |
 | [v1.0.2]      | default values to parameters |
 | [v1.0.1]      | [easyJson()](#easyJson) |
 | [v1.0.1]      | [binaryTree().toArray()](#binarytreetoarray) and  [binaryTree().fromArray()](#binarytreefromarray) |

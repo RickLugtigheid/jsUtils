@@ -31,4 +31,7 @@ console.log(treeArray)//lets take a look at the array
 //if we want we can load this array back into a tree
 let treeFromArray = new jsUtils.binaryTree();
 treeFromArray.fromArray(treeArray)
+//or
+const treeArraySN = jsUtils.treeFromArray(treeArray)
+
 treeFromArray.traverse()
