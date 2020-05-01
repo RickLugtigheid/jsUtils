@@ -20,12 +20,9 @@ function commandline(){
             //here we clear the database
             DB.clear()//we don't want to load an new db so we don't give an parameter
             console.log(DB)
+            DB.save()
+            console.log('saved')
             commandline()
-        }else if(cmd == "save"){
-        //save the new data to the data base
-        DB.save()
-        console.log('saved')
-        commandline()
         }else{commandline()}
     })
 }
@@ -38,6 +35,8 @@ function addUser(){
         if(!DB.json.users.includes(name)){
             console.log(DB.json.users.push(name));
             console.log(`\nwelcome ${name}`);
+            DB.save()
+            console.log('saved')
         }else{console.log("There is already a user with the name "+name)}
     
         //close our readline function

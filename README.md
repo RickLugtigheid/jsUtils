@@ -96,6 +96,11 @@ const jsUtils = require('@rick_lugtigheid/js_utils')
 var array = [30, 8, 900, 700, 10, 32]
 jsUtils.quickSort(array , 0, array.length-1)
 console.log(array);//Output: [8, 10, 30, 32, 700,900]
+
+//can also be an array of words
+var array = ["b", "d", "a", "c"]
+jsUtils.quickSort(array , 0, array.length-1)
+console.log(array)//Output: [ 'a', 'b', 'c', 'd' ]
 ```
 ----
 
@@ -108,6 +113,7 @@ easy for manipulating json files
 const jsUtils = require('@rick_lugtigheid/js_utils')
 
 const DB = new jsUtils.easyJson('./filename.json');//the parameter is the path where your json file is
+//if there is no jsonfile with that name than it will create a new json file
 ```
 for context here is the jsonfile I will be using for the documentation
 ```json
@@ -353,7 +359,7 @@ Note: v1.0.2 is not out yet
 | Version  | added |
 | ------------- | ------------- |
 | [v1.0.2]      | [Vector2()](#Vector2)[.Equals](#vector2equalsvector2-vector2) & [.Magnitude](#vector2magnitude) & [.Normalize](#vector2normalize) & [.Dot](#vector2dotvector2-vector2) & [.Clamp](#vector2clampmin-vector2-max-vector2) |
-| [v1.0.2]      | default values to parameters |
+| [v1.0.2]      | default values to parameters & added some short notations |
 | [v1.0.1]      | [easyJson()](#easyJson) |
 | [v1.0.1]      | [binaryTree().toArray()](#binarytreetoarray) and  [binaryTree().fromArray()](#binarytreefromarray) |
 ----
