@@ -196,72 +196,120 @@ const jsUtils = require('@rick_lugtigheid/js_utils')
 var x = 5, y = 10
 let vector = new jsUtils.Vector2(x, y);
 ```
-
-###### Vector2().toString()
+###### new Vector2() short notation
 ```js
-console.log(vector.toString()); //Output: vector2(5, 10)
+const jsUtils = require('@rick_lugtigheid/js_utils')
+jsUtils.Zero;//returns Vector2(0, 0)
+jsUtils.One;//returns Vector2(1, 1)
+jsUtils.UnitX;//returns Vector2(1, 0)
+jsUtils.UnitY;//returns Vector2(0, 1)
 ```
 
-###### Vector2().set(x, y)
+###### Vector2().Set(x, y)
 ```js
 //lets you set the x and y values of an Vector2
 vector.set(10, 20);
-console.log(vector.toString()); //Output: vector2(10, 20)
+console.log(vector); //Output: vector2(10, 20)
 ```
 
-###### Vector2().clone()
+###### Vector2().toString()
 ```js
-//makes a clone of a Vector2
+//lets you set the x and y values of an Vector2
+vector.set(1, 0);
+console.log("usefull for in strings => "+vector.toString()); //Output: usefull for in strings => {1, 0}
+```
+
+###### Vector2().Equals(Vector2?: Vector2)
+```js
+//compares 2 vectors
+vector.set(1, 1);
+if(vector.Equals(jsUtils.One)){
+   console.log(true)
+}
+```
+
+###### Vector2().Clone()
+```js
+//makes a clone
 var clone = vector.clone();
-console.log(clone.toString()); //Output: vector2(10, 20)
+console.log(clone); //Output: vector2(10, 20)
 ```
 
 [Vector2 Math]
 
-###### Vector2().add(vector2)
+###### Vector2().Add(vector2?: Vector2)
 ```js
 //this is basicly: vector.y + otherVector.y
 //and vector.x + otherVector.x
-var add = new jsUtils.Vector2(5, 5).add(new jsUtils.Vector2(5, 5));
-console.log(add.toString()); //Output: vector2(10, 10)
+var add = new jsUtils.Vector2(5, 5).Add(new jsUtils.Vector2(5, 5));
+console.log(add); //Output: vector2(10, 10)
 ```
 
-###### Vector2().subtract(vector2)
+###### Vector2().Subtract(vector2?: Vector2)
 ```js
 //this is basicly: vector.y - otherVector.y
 //and vector.x - otherVector.x
-var sub = new jsUtils.Vector2(5, 10).subtract(new jsUtils.Vector2(5, 5));
-console.log(sub.toString()); //Output: vector2(0, 5)
+var sub = new jsUtils.Vector2(5, 10).Subtract(new jsUtils.Vector2(5, 5));
+console.log(sub); //Output: vector2(0, 5)
 ```
 
-###### Vector2().Scale(vector2)
+###### Vector2().Scale(vector2?: Vector2)
 ```js
 //this is basicly: vector.y * otherVector.y
 //and vector.x * otherVector.x
 var scale = new jsUtils.Vector2(2, 5).Scale(new jsUtils.Vector2(6, 2));
-console.log(scale.toString()); //Output: vector2(12, 10)
+console.log(scale); //Output: vector2(12, 10)
 ```
 
-###### Vector2().Division(vector2)
+###### Vector2().Divide(vector2?: Vector2)
 ```js
 //this is basicly: vector.y / otherVector.y
 //and vector.x / otherVector.x
 var div = new jsUtils.Vector2(8, 12).Division(new jsUtils.Vector2(2, 2));
-console.log(div.toString()); //Output: vector2(4, 6)
+console.log(div); //Output: vector2(4, 6)
 ```
 
-###### Vector2().angle()
+###### Vector2().Magnitude()
+```js
+//Returns the length of this vector
+console.log(jsUtils.One.Magnitude()) //Output: 1.4142.....
+```
+
+###### Vector2().Normalize()
+```js
+//Returns this vector with a reduced magnitude (reduced to 1.0)
+console.log(console.log(new jsUtils.Vector2(5, -9).Normalize())) //Output: vector2(x: 0.4856..., y: -0.8741... )
+```
+
+###### Vector2().Dot(Vector2?: Vector2)
+```js
+//takes two vectors and returns a scalar
+console.log(jsUtils.One.Dot(jsUtils.One))//Output: 2
+```
+
+###### Vector2().Clamp(min?: Vector2, max?: Vector2)
+```js
+//Restricts this vector between a min and max value.
+var vector = new jsUtils.Vector2(40, -40);
+var min = new jsUtils.Vector2(5, -5);
+var max = new jsUtils.Vector2(60, 1);
+console.log(vector.Clamp(min, max)) //Output: vector(40, -5)
+```
+
+###### Vector2().Angle()
 ```js
 //calculate the angle between the y and x values of the vector in degrees
-var angle = new Vector2(1, 5).angle();
+var angle = new Vector2(1, 5).Angle();
 console.log(angle); //Output: 1,37.....ect note: the angle is in degrees
 ```
 ----
 
 ### Version Log
-
+Note: v1.0.2 is not out yet
 | Version  | added |
 | ------------- | ------------- |
+| [v1.0.2]      | [Vector2()](#Vector2).Equals & .Magnitude & .Normalize & .Dot & .Clamp|
+| [v1.0.2]      | default values to parameters |
 | [v1.0.1]      | [easyJson()](#easyJson) |
-| [v1.0.1]      | [binaryTree()](#binaryTree).toArray() and  [binaryTree()](#binaryTree).fromArray() |
+| [v1.0.1]      | [binaryTree().toArray()](#binarytreetoarray) and  [binaryTree().fromArray()](#binarytreefromarray) |
 ----

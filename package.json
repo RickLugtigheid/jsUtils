@@ -15,7 +15,8 @@
     "utils",
     "binarytree",
     "sorting",
-    "vector2"
+    "vector2",
+    "json database"
   ],
   "license": "ISC"
 }
