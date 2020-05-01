@@ -2,6 +2,10 @@
 
 jsUtils is a module for [Node.js](http://nodejs.org).
 
+[![module version](https://img.shields.io/npm/v/@rick_lugtigheid/js_utils)](#version-log)
+[![downloads](https://img.shields.io/npm/dm/@rick_lugtigheid/js_utils)](https://www.npmjs.com/package/@rick_lugtigheid/js_utils)
+
+
 ## Installation
 
 ```bash
@@ -33,8 +37,8 @@ $ npm i @rick_lugtigheid/js_utils
 
 * [Vector2()](#Vector2)
    * ###### Properties
-      * .x: `int`
-      * .y: `int`
+      * .x: `float`
+      * .y: `float`
    * ###### Misc Methods
       * [.Set()](#vector2setx-y)
       * [.toString()](#vector2tostring)
