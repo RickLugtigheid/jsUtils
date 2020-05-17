@@ -13,10 +13,13 @@
   "keywords": [
     "js-utils",
     "utils",
-    "binarytree",
     "sorting",
+    "binarytree",
     "vector2",
-    "json database"
+    "matrix",
+    "json database",
+    "powershell",
+    "python"
   ],
   "license": "ISC"
 }

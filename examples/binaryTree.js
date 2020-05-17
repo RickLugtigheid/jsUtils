@@ -10,8 +10,9 @@ for(var i =0; i < 100; i++){
     tree.add(new jsUtils.node(Math.floor(Math.random() * (-50, 50))));//adds a node with a value between -50 and 50
 }
 //show all nodes from root
-tree.traverse();
-
+if(!tree.includes(5)){
+    tree.traverse();
+}
 //check if we have a node with the value -10 - 10
 for(var i =-10; i < 10; i++){
     var search = tree.search(i);
@@ -35,3 +36,8 @@ treeFromArray.fromArray(treeArray)
 const treeArraySN = jsUtils.treeFromArray(treeArray)
 
 treeFromArray.traverse()
+console.log('===================')
+
+treeFromArray.forEach((node)=>{
+    console.log(node.value)
+})
